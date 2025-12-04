@@ -1,0 +1,47 @@
+1) Identifique o erro no código abaixo:
+
+<View style={{ justifyContent: "middle", alignItems: "center" }}>
+  <Text>Hello</Text>
+</View>
+
+A) O Text deve ter style obrigatório.
+Resposta: B) justifyContent não aceita o valor "middle"
+C) alignItems deveria ser <start>
+D) View precisa ter flexDirection.
+----------------------------------------------------------------------------------------
+2) Analise o erro no código abaixo:
+
+const [text, setText] = "Hello"
+<TextInput
+  value={text}
+  onChangeText={setText}
+/>
+
+A) TextInput não aceita o atributo onChangeText.
+Resposta: B) O estado está sendo inicializado com uma string ao invés de um useState.
+C) O TextInput precisa de secureTextEntry.
+D) O value não pode ser controlado.
+----------------------------------------------------------------------------------------
+3) Identifique o problema de estilo no código:
+<View style={styles.container}>
+  <Text style={styles.titl}>Olá</Text>
+</View>
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 30
+  }
+});
+
+A) A View está sem style.
+B) O StyleSheet está sendo definido depois do return.
+Resposta: C) O style "container" não foi definido no StyleSheet.
+D) A classe title não está sendo aplicada corretamente.
+----------------------------------------------------------------------------------------
+4) Sobre o Flexbox no React Native, qual opção é verdadeira?
+
+A) O valor padrão de flexDirection no RN é row.
+B) O valor padrão de flexDirection é column.
+C) RN não usa Flexbox, apenas CSS normal.
+D) Para usar Flexbox no RN é necessário importar uma biblioteca.
+----------------------------------------------------------------------------------------
+5) Explique a diferença entre o JavaScript e o TypeScript utilizando exemplos.
