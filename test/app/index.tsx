@@ -20,7 +20,7 @@ export default function HomeScreen() {
     await signInWithEmailAndPassword(auth, email, password)
     router.navigate('/Home') 
   }
-  
+
   return (
     <>
       <View style={{flex: 1, alignItems: 'center', backgroundColor: 'lightcyan'}}>
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignContent: 'center',
-    fontWeight: '200',
+    fontSize: 30,
     margin: 0,
     padding: 0,
   },

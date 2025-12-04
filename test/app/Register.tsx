@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignContent: 'center',
-    fontWeight: '200',
+    fontSize: 30,
     margin: 0,
     padding: 0,
   },

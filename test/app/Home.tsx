@@ -14,11 +14,15 @@ export default function Login() {
           <Image style={styles.image} source={require('../assets/images/lofi1.jpg')}></Image>
         </View>
         <View style={{flex: 1}}>
+          <Text style={{flex: 1, alignSelf: 'center', fontSize: 40}}>1:00:00</Text>
           <View style={styles.line}></View>
             <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', margin: 15}}>
 
               <TouchableOpacity style={styles.button}>
                 <Image style={styles.icon} source={require('../assets/images/list.png')}></Image>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.mainButton}>
+                <Image style={styles.mainIcon} source={require('../assets/images/kawaii.png')}></Image>
               </TouchableOpacity>
               <TouchableOpacity style={styles.button}>
                 <Image style={styles.icon} source={require('../assets/images/music.png')}></Image>
@@ -36,7 +40,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignContent: 'center',
-    fontWeight: '200',
+    fontSize: 30,
     margin: 0,
     padding: 0,
   },
@@ -59,16 +63,30 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   button: {
-    height: 65,
-    width: 65,
+    height: 45,
+    width: 45,
     margin: 8,
     padding: 8,
     backgroundColor: 'darkcyan',
     borderRadius: 30
   },
   icon: {
-    height: 35,
-    width: 35,
+    height: 25,
+    width: 25,
+    alignSelf: 'center',
+    justifyContent: 'center'
+  },
+  mainButton: {
+    height: 65,
+    width: 65,
+    margin: 8,
+    padding: 8,
+    backgroundColor: 'darkcyan',
+    borderRadius: 30 
+  },
+  mainIcon: {
+    height: 55,
+    width: 55,
     alignSelf: 'center',
     justifyContent: 'center'
   }
