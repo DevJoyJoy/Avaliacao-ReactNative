@@ -36,12 +36,14 @@ A) A View está sem style.
 B) O StyleSheet está sendo definido depois do return.
 Resposta: C) O style "container" não foi definido no StyleSheet.
 D) A classe title não está sendo aplicada corretamente.
+ps: o title esta escrito errado tambem, mas não sei se foi proposital
 ----------------------------------------------------------------------------------------
 4) Sobre o Flexbox no React Native, qual opção é verdadeira?
 
 A) O valor padrão de flexDirection no RN é row.
-B) O valor padrão de flexDirection é column.
+Resposta: B) O valor padrão de flexDirection é column.
 C) RN não usa Flexbox, apenas CSS normal.
 D) Para usar Flexbox no RN é necessário importar uma biblioteca.
 ----------------------------------------------------------------------------------------
 5) Explique a diferença entre o JavaScript e o TypeScript utilizando exemplos.
+O TypeScript é utilizado para programação Mobile, possuindo algumas funções específicas para esse tipo de front, se adaptando melhor.
