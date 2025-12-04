@@ -5,14 +5,6 @@ import {router} from 'expo-router';
 
 export default function Login() {
   
-  const signIn = async () => {
-    return router.navigate('/Login')
-  }
-
-  
-  const register = async () => {
-    return router.navigate('/Register')
-  }
 
   return (
     <>
@@ -25,11 +17,11 @@ export default function Login() {
           <View style={styles.line}></View>
             <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', margin: 15}}>
 
-              <TouchableOpacity onPress={signIn} style={styles.button}>
-                <View>Sign-in</View>
+              <TouchableOpacity style={styles.button}>
+                <Image style={styles.icon} source={require('../assets/images/list.png')}></Image>
               </TouchableOpacity>
-              <TouchableOpacity onPress={register} style={styles.button}>
-                <View>Register</View>
+              <TouchableOpacity style={styles.button}>
+                <Image style={styles.icon} source={require('../assets/images/music.png')}></Image>
               </TouchableOpacity>
             </View>
 
@@ -67,11 +59,17 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   button: {
-    height: 30,
+    height: 65,
     width: 65,
     margin: 8,
     padding: 8,
     backgroundColor: 'darkcyan',
-    borderRadius: 8
+    borderRadius: 30
+  },
+  icon: {
+    height: 35,
+    width: 35,
+    alignSelf: 'center',
+    justifyContent: 'center'
   }
 });

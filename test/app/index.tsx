@@ -3,10 +3,10 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 import {router} from 'expo-router';
 import { app } from '../firebaseConfig'
 import { useState, useEffect } from "react";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 
 export default function HomeScreen() {
-    const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
@@ -14,10 +14,13 @@ export default function HomeScreen() {
     return router.navigate('/Register')
   }
 
-  const login = async () => {
-    return router.navigate('/Login')
-  }
+  const auth = getAuth(app)
 
+  const signIn = async () => {
+    await signInWithEmailAndPassword(auth, email, password)
+    router.navigate('/Home') 
+  }
+  
   return (
     <>
       <View style={{flex: 1, alignItems: 'center', backgroundColor: 'lightcyan'}}>
@@ -25,7 +28,7 @@ export default function HomeScreen() {
         <View style={{flex: 1, justifyContent: 'center' }}>
             <TextInput placeholder='E-mail' onChangeText={(email) => setEmail(email)} style={styles.box}></TextInput>
             <TextInput placeholder='Password' onChangeText={(password) => setPassword(password)} style={styles.box}></TextInput>
-            <TouchableOpacity onPress={login} style={styles.loginButton}>
+            <TouchableOpacity onPress={signIn} style={styles.loginButton}>
                 <View>
                     Login
                 </View>
@@ -35,9 +38,6 @@ export default function HomeScreen() {
             <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', margin: 15}}>
               <TouchableOpacity onPress={register} style={styles.button}>
                 <View>Don't have an account? Create one!</View>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={login} style={styles.button}>
-                <View>Go back to Lofi screen</View>
               </TouchableOpacity>
             </View>
 
@@ -75,8 +75,8 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   button: {
-    height: 70,
-    width: 150,
+    height: 35,
+    width: 244,
     margin: 8,
     padding: 8,
     backgroundColor: 'darkcyan',
